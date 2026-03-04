@@ -521,13 +521,41 @@
 }
 
 .hero-core__inner {
+  display: flex;
   height: 100%;
   width: 100%;
+  align-items: center;
   border-radius: inherit;
+  flex-direction: column;
+  justify-content: center;
   padding: 2rem;
+  text-align: center;
   background:
     radial-gradient(circle at top, rgba(197, 157, 217, 0.18), transparent 65%),
     linear-gradient(180deg, rgba(15, 5, 24, 0.94), rgba(43, 13, 62, 0.82));
+}
+
+.hero-core__kicker {
+  justify-content: center;
+}
+
+.hero-core__title {
+  margin-top: 1rem;
+  text-wrap: balance;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: 2.25rem;
+  line-height: 0.95;
+  letter-spacing: -0.08em;
+  color: rgba(245, 246, 247, 0.98);
+}
+
+.hero-core__copy {
+  margin-top: 1rem;
+  max-width: 14rem;
+  text-wrap: balance;
+  font-size: 0.92rem;
+  line-height: 1.9;
+  color: rgba(193, 196, 200, 0.78);
 }
 
 .hero-beacon {
