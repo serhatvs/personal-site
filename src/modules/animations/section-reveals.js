@@ -30,22 +30,32 @@ export function initSectionReveals(gsap, ScrollTrigger) {
   const sections = gsap.utils.toArray('[data-reveal]')
 
   sections.forEach((section) => {
-    const targets = section.querySelectorAll('[data-reveal-item]')
+    const targets = [...section.querySelectorAll('[data-reveal-item]')]
 
     if (!targets.length) {
       return
     }
 
-    gsap.from(targets, {
-      y: 28,
-      opacity: 0,
-      duration: 0.9,
-      stagger: 0.12,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: section,
-        start: 'top 78%',
-        once: true,
+    ScrollTrigger.create({
+      trigger: section,
+      start: 'top 78%',
+      once: true,
+      onEnter: () => {
+        gsap.fromTo(
+          targets,
+          {
+            y: 28,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.9,
+            stagger: 0.12,
+            ease: 'power3.out',
+            overwrite: 'auto',
+          },
+        )
       },
     })
   })

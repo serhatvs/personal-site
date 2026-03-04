@@ -284,6 +284,173 @@
   }
 }
 
+.tech-gallery-shell {
+  position: relative;
+}
+
+.tech-gallery {
+  position: relative;
+  min-height: clamp(26rem, 58vw, 34rem);
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.tech-gallery::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(197, 157, 217, 0.14), transparent 30%),
+    radial-gradient(circle at 84% 24%, rgba(230, 165, 32, 0.12), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 48%);
+  pointer-events: none;
+}
+
+.tech-cards {
+  display: flex;
+  height: 100%;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0 0 4.8rem;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+}
+
+.tech-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.tech-card {
+  position: relative;
+  flex: 0 0 min(24rem, 82vw);
+  width: min(24rem, 82vw);
+  height: 100%;
+  list-style: none;
+  scroll-snap-align: center;
+}
+
+.tech-gallery.is-enhanced {
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+.tech-gallery.is-enhanced.is-dragging {
+  cursor: grabbing;
+}
+
+.tech-gallery.is-enhanced .tech-cards {
+  position: absolute;
+  width: min(24rem, 82vw);
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  display: block;
+  overflow: visible;
+  padding: 0;
+  transform: translate(-50%, -50%);
+}
+
+.tech-gallery.is-enhanced .tech-card {
+  position: absolute;
+  width: min(24rem, 82vw);
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.tech-card__surface {
+  position: relative;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  border-radius: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03)),
+    radial-gradient(circle at top right, rgba(var(--tech-accent), 0.18), transparent 34%),
+    rgba(15, 5, 24, 0.52);
+  padding: 1.45rem;
+  box-shadow:
+    0 28px 80px rgba(5, 2, 10, 0.5),
+    0 0 0 1px rgba(var(--tech-accent), 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.tech-card__surface::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+.tech-card__group {
+  border-color: rgba(var(--tech-accent), 0.24);
+  color: rgba(245, 246, 247, 0.86);
+}
+
+.tech-card__icon {
+  color: rgba(245, 246, 247, 0.92);
+  border-color: rgba(var(--tech-accent), 0.3);
+  background:
+    linear-gradient(135deg, rgba(var(--tech-accent), 0.24), rgba(255, 255, 255, 0.05)),
+    rgba(255, 255, 255, 0.04);
+}
+
+.tech-card__pulse {
+  height: 0.8rem;
+  width: 0.8rem;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(var(--tech-accent), 0.95), rgba(var(--tech-accent), 0.2));
+  box-shadow: 0 0 24px rgba(var(--tech-accent), 0.4);
+}
+
+.tech-actions {
+  position: absolute;
+  bottom: 1.15rem;
+  left: 50%;
+  z-index: 5;
+  display: flex;
+  gap: 0.8rem;
+  transform: translateX(-50%);
+}
+
+.tech-control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 7rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(15, 5, 24, 0.66);
+  padding: 0.85rem 1.15rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(245, 246, 247, 0.86);
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.tech-control:hover {
+  border-color: rgba(255, 215, 122, 0.34);
+  background: rgba(28, 12, 43, 0.82);
+  color: rgba(255, 248, 231, 0.95);
+}
+
+.tech-drag-proxy {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 [data-site-header] {
   background: var(--header-bg);
   backdrop-filter: blur(14px);
@@ -434,6 +601,26 @@
 @media (max-width: 767px) {
   .project-card::before {
     inset: -20% 20% 55% -15%;
+  }
+
+  .tech-gallery {
+    min-height: 31rem;
+    padding: 0.9rem;
+  }
+
+  .tech-gallery.is-enhanced .tech-cards,
+  .tech-gallery.is-enhanced .tech-card {
+    width: min(21rem, 84vw);
+  }
+
+  .tech-actions {
+    width: calc(100% - 1.8rem);
+    justify-content: center;
+  }
+
+  .tech-control {
+    min-width: 0;
+    flex: 1 1 auto;
   }
 }
 

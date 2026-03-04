@@ -28,19 +28,30 @@ export function scheduleEnhancement(task, timeout = 150) {
 }
 
 export async function startMotionEnhancements() {
-  const [{ gsap }, { ScrollTrigger }, { initHeroTimeline }, { initSectionReveals }, { initInteractions }, anime] =
-    await Promise.all([
-      import('gsap'),
-      import('gsap/ScrollTrigger'),
-      import('../animations/hero-timeline.js'),
-      import('../animations/section-reveals.js'),
-      import('../animations/interactions.js'),
-      import('animejs'),
-    ])
+  const [
+    { gsap },
+    { ScrollTrigger },
+    { Draggable },
+    { initHeroTimeline },
+    { initSectionReveals },
+    { initTechSlider },
+    { initInteractions },
+    anime,
+  ] = await Promise.all([
+    import('gsap'),
+    import('gsap/ScrollTrigger'),
+    import('gsap/Draggable'),
+    import('../animations/hero-timeline.js'),
+    import('../animations/section-reveals.js'),
+    import('../animations/tech-slider.js'),
+    import('../animations/interactions.js'),
+    import('animejs'),
+  ])
 
-  gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger, Draggable)
   initHeroTimeline(gsap)
   initSectionReveals(gsap, ScrollTrigger)
+  initTechSlider({ gsap, Draggable })
   initInteractions(anime)
 }
 
