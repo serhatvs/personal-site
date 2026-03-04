@@ -8,7 +8,7 @@ export const siteContent = {
     { label: 'Transmission', target: 'contact' },
   ],
   contact: {
-    email: 'hello@lunerya.dev',
+    email: 'serhat.yavuz@agu.edu.tr',
   },
   projects: [
     {
