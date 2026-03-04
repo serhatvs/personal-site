@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "blog:generate": "node ./scripts/blog-generator.mjs",
+    "portfolio:generate": "node ./scripts/portfolio-generator.mjs",
+    "content:generate": "npm run blog:generate && npm run portfolio:generate",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --host"

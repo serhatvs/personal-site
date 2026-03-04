@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tool profile for GSAP in the Lunerya stack, covering hero motion, scroll reveal, and timeline ownership." />
+    <meta name="theme-color" content="#0f0518" />
+    <meta property="og:title" content="GSAP | Lunerya" />
+    <meta property="og:description" content="Tool profile for GSAP in the Lunerya stack, covering hero motion, scroll reveal, and timeline ownership." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/tools/gsap/" />
+    <meta property="og:image" content="/og-cover.svg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="GSAP | Lunerya" />
+    <meta property="twitter:description" content="Tool profile for GSAP in the Lunerya stack, covering hero motion, scroll reveal, and timeline ownership." />
+    <meta property="twitter:image" content="/og-cover.svg" />
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+    <link rel="manifest" href="../../site.webmanifest" />
+    <title>GSAP | Lunerya</title>
+    <script type="module" src="../../src/tool-detail.js"></script>
+  </head>
+  <body data-page-kind="tools" class="min-w-[320px] bg-void-950 text-mist-50 antialiased">
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-30 bg-void-gradient opacity-90"></div>
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-20 cosmic-grid opacity-60"></div>
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 scanline opacity-40"></div>
+    
+    <header data-site-header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 transition-all duration-300">
+      <nav class="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 md:px-8 lg:px-10">
+        <a href="../../" class="group inline-flex items-center gap-3">
+          <span class="logo-wordmark text-2xl font-semibold tracking-tight text-mist-50 md:text-3xl">Lunerya</span>
+          <span class="chip chip-ghost text-[0.65rem] tracking-[0.32em] text-amethyst-200">TOOLS</span>
+        </a>
+        
+    <div class="hidden items-center gap-7 md:flex">
+      <a href="../../" data-page-link="home" class="nav-link inner-page-link">Home</a>
+      <a href="../../projects/" data-page-link="projects" class="nav-link inner-page-link">Projects</a>
+      <a href="../../tools/" data-page-link="tools" class="nav-link inner-page-link">Tools</a>
+      <a href="../../blog/" data-page-link="journal" class="nav-link inner-page-link">Journal</a>
+      <a href="../../#contact" data-page-link="contact" class="nav-link inner-page-link">Contact</a>
+    </div>
+  
+        <div class="flex items-center gap-3">
+          <a href="../../#contact" class="void-button hidden md:inline-flex">
+            Connect
+            <i data-lucide="arrow-right"></i>
+          </a>
+          <button
+            type="button"
+            data-menu-toggle
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/15 bg-white/5 text-mist-50 transition hover:border-amethyst-200/60 hover:bg-white/10 md:hidden"
+          >
+            <span class="sr-only">Open navigation</span>
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+  
+    
+    <div id="mobile-menu" data-mobile-menu hidden class="fixed inset-0 z-[60] bg-void-950/95 px-6 py-6 backdrop-blur-xl">
+      <div class="mx-auto flex h-full w-full max-w-lg flex-col rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-void-glow">
+        <div class="flex items-center justify-between">
+          <span class="logo-wordmark text-2xl font-semibold tracking-tight text-mist-50">Lunerya</span>
+          <button
+            type="button"
+            data-menu-close
+            class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/15 bg-white/5 text-mist-50 transition hover:border-amethyst-200/60 hover:bg-white/10"
+          >
+            <span class="sr-only">Close navigation</span>
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <div class="mt-12 flex flex-1 flex-col justify-between">
+          
+    <div class="flex flex-col gap-4">
+      <a href="../../" data-menu-close data-page-link="home" class="mobile-nav-link">Home</a>
+      <a href="../../projects/" data-menu-close data-page-link="projects" class="mobile-nav-link">Projects</a>
+      <a href="../../tools/" data-menu-close data-page-link="tools" class="mobile-nav-link">Tools</a>
+      <a href="../../blog/" data-menu-close data-page-link="journal" class="mobile-nav-link">Journal</a>
+      <a href="../../#contact" data-menu-close data-page-link="contact" class="mobile-nav-link">Contact</a>
+    </div>
+  
+
+          <div class="glass-panel mt-12 rounded-[1.75rem] p-5">
+            <div class="eyebrow text-amethyst-200">Signal Route</div>
+            <a href="mailto:serhat.yavuz@agu.edu.tr" class="mt-4 inline-flex items-center gap-3 text-lg font-medium text-mist-50 transition hover:text-topaz-300">
+              <i data-lucide="mail"></i>
+              serhat.yavuz@agu.edu.tr
+            </a>
+            <p class="mt-4 text-sm text-mist-200/70">
+              Available for premium product design, frontend systems, and immersive interface builds.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <main class="relative z-10 pb-24 pt-28">
+    <section class="section-shell !pb-16 !pt-10">
+      <div class="section-inner">
+        <a href="../" class="detail-back-link"><i data-lucide="arrow-left"></i>Back to Tools</a>
+
+        <article data-tool-detail data-tool-slug="gsap" class="detail-shell mt-8">
+          <div class="detail-kicker">
+            <span class="section-kicker text-amethyst-200">Tool Profile</span>
+            <span class="chip chip-ghost">Motion</span>
+          </div>
+          <h1 class="detail-title">GSAP</h1>
+          <p class="detail-excerpt">GSAP owns page-level movement in Lunerya, from hero timing to the tech slider and section reveals, without taking control of the content layer.</p>
+          <div class="detail-meta">
+            <span>Motion</span>
+            <span>topaz</span>
+          </div>
+          <div class="detail-chip-row">
+            <span class="icon-frame text-mist-50"><i data-lucide="sparkles"></i></span>
+            <span class="chip">Motion</span><span class="chip">Scroll</span><span class="chip">Timeline</span>
+          </div>
+
+          <div class="detail-grid">
+            <section class="detail-panel">
+              <p class="detail-panel__label">Responsibilities</p>
+              
+    <ul class="detail-list">
+      <li>Hero staging</li><li>Scroll reveal</li><li>Section transitions</li><li>Tech slider loop</li>
+    </ul>
+  
+              
+    <div class="detail-highlights">
+      
+            <div class="detail-highlight">
+              <span class="detail-highlight__label">Role</span>
+              <strong class="detail-highlight__value">Timeline engine</strong>
+            </div>
+          
+            <div class="detail-highlight">
+              <span class="detail-highlight__label">Ownership</span>
+              <strong class="detail-highlight__value">Page-level motion</strong>
+            </div>
+          
+    </div>
+  
+            </section>
+            <section class="detail-panel">
+              <p class="detail-panel__label">Constraints</p>
+              
+    <ul class="detail-list">
+      <li>Reduced-motion fallback</li><li>Transform-only animation policy</li>
+    </ul>
+  
+            </section>
+          </div>
+
+          
+    <div class="detail-sections">
+      
+            <section class="detail-section">
+              <h2 class="detail-section__title">Why it is in the stack</h2>
+              <div class="detail-section__copy">
+                <p>GSAP is used where animation timing needs to feel authored rather than incidental. It gives the site precise control over hero entrance, reveal sequences, and long-running motion systems.</p><p>That control matters because premium motion only feels expensive when pacing, overlap, and ownership are intentional.</p>
+              </div>
+            </section>
+          
+            <section class="detail-section">
+              <h2 class="detail-section__title">Where it is used</h2>
+              <div class="detail-section__copy">
+                <p>The homepage hero, section reveals, and tech stack slider all rely on GSAP timelines. It is also the boundary line between structural motion and lighter hover feedback.</p><p>Using a single timeline owner for page-level motion keeps interactions coherent and reduces transform conflicts.</p>
+              </div>
+            </section>
+          
+            <section class="detail-section">
+              <h2 class="detail-section__title">Guardrails</h2>
+              <div class="detail-section__copy">
+                <p>GSAP does not own content rendering. It only stages already-rendered elements and must respect reduced-motion preferences.</p><p>Animations stay limited to opacity, transform, and CSS variables so layout remains stable under load.</p>
+              </div>
+            </section>
+          
+    </div>
+  
+
+          <div class="mt-10 flex flex-wrap gap-4"><a href="https://gsap.com/" class="void-button" target="_blank" rel="noreferrer">Official docs<i data-lucide="arrow-up-right"></i></a></div>
+        </article>
+
+        <section class="mt-16">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Related Tools</p>
+              <h2 class="text-3xl font-display font-semibold tracking-[-0.05em] text-mist-50 md:text-4xl">Stack Adjacencies</h2>
+            </div>
+            <p class="max-w-xl text-sm leading-7 text-mist-200/65 md:text-base">
+              Nearby tools with similar responsibilities, overlapping tags, or shared constraints inside the Lunerya stack.
+            </p>
+          </div>
+          <div data-related-tools class="detail-related-grid mt-10"></div>
+        </section>
+
+        
+              <section class="mt-16">
+                <div class="section-heading">
+                  <div>
+                    <p class="section-kicker">Used In Projects</p>
+                    <h2 class="text-3xl font-display font-semibold tracking-[-0.05em] text-mist-50 md:text-4xl">Where It Shows Up</h2>
+                  </div>
+                  <p class="max-w-xl text-sm leading-7 text-mist-200/65 md:text-base">
+                    Projects where this tool takes a visible role in delivery, interface behavior, or operational structure.
+                  </p>
+                </div>
+                <div data-tool-projects class="detail-related-grid mt-10"></div>
+              </section>
+            
+
+        <article class="editorial-cta-panel">
+          <p class="eyebrow text-topaz-300">Operational Stack</p>
+          <h2 class="mt-4 max-w-2xl text-3xl font-display font-semibold tracking-[-0.05em] text-mist-50 md:text-4xl">
+            Want this stack thinking applied to a real product or portfolio system?
+          </h2>
+          <p class="mt-6 max-w-2xl text-sm leading-7 text-mist-200/70 md:text-base">
+            Tools are only valuable when their ownership is explicit. The same discipline can shape premium launch pages, frontend systems, and resilient static products.
+          </p>
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a href="../../projects/" class="void-button">See projects<i data-lucide="arrow-right"></i></a>
+            <a href="../../#contact" class="void-button void-button-ghost">Start a conversation<i data-lucide="send"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+    
+    <footer class="relative z-10 border-t border-white/10 bg-black/20">
+      <div class="mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 py-10 md:px-8 lg:px-10">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <div class="logo-wordmark text-2xl font-semibold tracking-tight text-mist-50">Lunerya</div>
+            <p class="mt-2 text-sm text-mist-200/60">Tool profiles for the runtimes, motion systems, and delivery layers behind Lunerya.</p>
+          </div>
+          <div data-socials-footer data-social-style="footer" class="flex flex-wrap gap-3"></div>
+        </div>
+        <div class="flex flex-col gap-5 border-t border-white/10 pt-6 text-sm text-mist-200/55 md:flex-row md:items-center md:justify-between">
+          <p>&copy; <span data-current-year></span> Lunerya. Void Edition.</p>
+          <a href="../../#contact" class="transition hover:text-topaz-300">serhat.yavuz@agu.edu.tr</a>
+        </div>
+      </div>
+    </footer>
+  
+  </body>
+</html>

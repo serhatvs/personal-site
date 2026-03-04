@@ -203,12 +203,37 @@ function renderPostNavigation(previousPost, nextPost) {
   `
 }
 
+function renderDesktopNav(rootPrefix) {
+  return `
+    <div class="hidden items-center gap-7 md:flex">
+      <a href="${rootPrefix}" data-page-link="home" class="nav-link inner-page-link">Home</a>
+      <a href="${rootPrefix}projects/" data-page-link="projects" class="nav-link inner-page-link">Projects</a>
+      <a href="${rootPrefix}tools/" data-page-link="tools" class="nav-link inner-page-link">Tools</a>
+      <a href="${rootPrefix}blog/" data-page-link="journal" class="nav-link inner-page-link">Journal</a>
+      <a href="${rootPrefix}#contact" data-page-link="contact" class="nav-link inner-page-link">Contact</a>
+    </div>
+  `
+}
+
+function renderMobileNav(rootPrefix) {
+  return `
+    <div class="flex flex-col gap-4">
+      <a href="${rootPrefix}" data-menu-close data-page-link="home" class="mobile-nav-link">Home</a>
+      <a href="${rootPrefix}projects/" data-menu-close data-page-link="projects" class="mobile-nav-link">Projects</a>
+      <a href="${rootPrefix}tools/" data-menu-close data-page-link="tools" class="mobile-nav-link">Tools</a>
+      <a href="${rootPrefix}blog/" data-menu-close data-page-link="journal" class="mobile-nav-link">Journal</a>
+      <a href="${rootPrefix}#contact" data-menu-close data-page-link="contact" class="mobile-nav-link">Contact</a>
+    </div>
+  `
+}
+
 function renderPostPage(post, previousPost, nextPost, basePath) {
   const tagChips = renderTagChips(post.tags)
   const cover = resolveCover(post.cover, basePath)
   const updatedMeta = post.updatedAt
     ? `<span>Updated ${escapeHtml(formatDate(post.updatedAt))}</span>`
     : ''
+  const rootPrefix = '../../'
 
   return `<!doctype html>
 <html lang="en" class="scroll-smooth">
@@ -231,26 +256,22 @@ function renderPostPage(post, previousPost, nextPost, basePath) {
     <title>${escapeHtml(post.title)} | Lunerya Journal</title>
     <script type="module" src="../../src/blog-post.js"></script>
   </head>
-  <body class="min-w-[320px] bg-void-950 text-mist-50 antialiased">
+  <body data-page-kind="journal" class="min-w-[320px] bg-void-950 text-mist-50 antialiased">
     <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-30 bg-void-gradient opacity-90"></div>
     <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-20 cosmic-grid opacity-60"></div>
     <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 scanline opacity-40"></div>
 
     <header data-site-header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 transition-all duration-300">
       <nav class="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 md:px-8 lg:px-10">
-        <a href="../../" class="group inline-flex items-center gap-3">
+        <a href="${rootPrefix}" class="group inline-flex items-center gap-3">
           <span class="logo-wordmark text-2xl font-semibold tracking-tight text-mist-50 md:text-3xl">Lunerya</span>
           <span class="chip chip-ghost text-[0.65rem] tracking-[0.32em] text-amethyst-200">JOURNAL</span>
         </a>
 
-        <div class="hidden items-center gap-7 md:flex">
-          <a href="../../" class="nav-link">Home</a>
-          <a href="../" class="nav-link is-active">Journal</a>
-          <a href="../../#contact" class="nav-link">Contact</a>
-        </div>
+        ${renderDesktopNav(rootPrefix)}
 
         <div class="flex items-center gap-3">
-          <a href="../../#contact" class="void-button hidden md:inline-flex">
+          <a href="${rootPrefix}#contact" class="void-button hidden md:inline-flex">
             Connect
             <i data-lucide="arrow-right"></i>
           </a>
@@ -284,11 +305,7 @@ function renderPostPage(post, previousPost, nextPost, basePath) {
         </div>
 
         <div class="mt-12 flex flex-1 flex-col justify-between">
-          <div class="flex flex-col gap-4">
-            <a href="../../" data-menu-close class="mobile-nav-link">Home</a>
-            <a href="../" data-menu-close class="mobile-nav-link">Journal</a>
-            <a href="../../#contact" data-menu-close class="mobile-nav-link">Contact</a>
-          </div>
+          ${renderMobileNav(rootPrefix)}
 
           <div class="glass-panel mt-12 rounded-[1.75rem] p-5">
             <div class="eyebrow text-amethyst-200">Signal Route</div>
@@ -363,11 +380,11 @@ function renderPostPage(post, previousPost, nextPost, basePath) {
               The same discipline used in these entries is available for premium product pages, portfolio systems, and motion-heavy frontend architecture.
             </p>
             <div class="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a href="../../#contact" class="void-button">
+              <a href="${rootPrefix}#contact" class="void-button">
                 Start a conversation
                 <i data-lucide="send"></i>
               </a>
-              <a href="../../#projects" class="void-button void-button-ghost">
+              <a href="${rootPrefix}projects/" class="void-button void-button-ghost">
                 View projects
                 <i data-lucide="arrow-right"></i>
               </a>
@@ -389,8 +406,8 @@ function renderPostPage(post, previousPost, nextPost, basePath) {
         </div>
 
         <div class="flex flex-col gap-5 border-t border-white/10 pt-6 text-sm text-mist-200/55 md:flex-row md:items-center md:justify-between">
-          <p>© <span data-current-year></span> Lunerya. Journal edition.</p>
-          <a href="../../#contact" class="transition hover:text-topaz-300">serhat.yavuz@agu.edu.tr</a>
+          <p>&copy; <span data-current-year></span> Lunerya. Journal edition.</p>
+          <a href="${rootPrefix}#contact" class="transition hover:text-topaz-300">serhat.yavuz@agu.edu.tr</a>
         </div>
       </div>
     </footer>

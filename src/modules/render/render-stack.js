@@ -1,13 +1,33 @@
-const accentByGroup = {
-  'Core Runtime': '230, 165, 32',
-  'Motion Layer': '197, 157, 217',
-  'Experience Layer': '193, 196, 200',
+import { getToolsHref } from './content-utils.js'
+
+const accentByName = {
+  amethyst: '197, 157, 217',
+  topaz: '230, 165, 32',
+  mist: '193, 196, 200',
 }
 
-export function renderStack(container, stackItems) {
+function renderTags(tags = []) {
+  return tags
+    .slice(0, 2)
+    .map((tag) => `<span class="chip !px-3 !py-1.5 !text-[0.62rem] !tracking-[0.18em]">${tag}</span>`)
+    .join('')
+}
+
+export function renderStack(container, stackItems, options = {}) {
   if (!container) {
     return
   }
+
+  if (!stackItems.length) {
+    container.innerHTML = `
+      <article class="glass-panel rounded-[2rem] p-8 text-sm text-mist-200/70">
+        Tool index is being prepared.
+      </article>
+    `
+    return
+  }
+
+  const archiveHref = getToolsHref()
 
   container.innerHTML = `
     <div data-reveal-item class="tech-gallery-shell">
@@ -19,7 +39,7 @@ export function renderStack(container, stackItems) {
                 <li
                   class="tech-card"
                   data-tech-card
-                  style="--tech-accent:${accentByGroup[item.group] || '197, 157, 217'};"
+                  style="--tech-accent:${accentByName[item.accent] || '197, 157, 217'};"
                 >
                   <article class="tech-card__surface">
                     <div class="flex items-start justify-between gap-5">
@@ -38,9 +58,19 @@ export function renderStack(container, stackItems) {
                       ${item.summary}
                     </p>
 
+                    <div class="mt-6 flex flex-wrap gap-2">
+                      ${renderTags(item.tags)}
+                    </div>
+
                     <div class="mt-auto flex items-center justify-between gap-4 pt-8">
-                      <span class="eyebrow text-mist-200/55">Module ${String(index + 1).padStart(2, '0')}</span>
-                      <span class="tech-card__pulse" aria-hidden="true"></span>
+                      <div class="flex items-center gap-4">
+                        <span class="eyebrow text-mist-200/55">Module ${String(index + 1).padStart(2, '0')}</span>
+                        <span class="tech-card__pulse" aria-hidden="true"></span>
+                      </div>
+                      <a href="${item.href}" class="social-link !px-4 !py-2.5 !text-[0.68rem] !tracking-[0.22em]">
+                        Open tool
+                        <i data-lucide="arrow-up-right"></i>
+                      </a>
                     </div>
                   </article>
                 </li>
@@ -79,6 +109,13 @@ export function renderStack(container, stackItems) {
         >
           Next
         </button>
+      </div>
+
+      <div class="flex justify-end">
+        <a href="${archiveHref}" data-tools-cta class="void-button void-button-ghost">
+          ${options.archiveCtaLabel || 'Open tools index'}
+          <i data-lucide="arrow-right"></i>
+        </a>
       </div>
 
       <div class="tech-drag-proxy" data-tech-drag-proxy aria-hidden="true"></div>

@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Case study for Void Relay, a modular frontend architecture built for immersive interfaces and static delivery." />
+    <meta name="theme-color" content="#0f0518" />
+    <meta property="og:title" content="Void Relay | Lunerya" />
+    <meta property="og:description" content="Case study for Void Relay, a modular frontend architecture built for immersive interfaces and static delivery." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/projects/void-relay/" />
+    <meta property="og:image" content="/og-cover.svg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Void Relay | Lunerya" />
+    <meta property="twitter:description" content="Case study for Void Relay, a modular frontend architecture built for immersive interfaces and static delivery." />
+    <meta property="twitter:image" content="/og-cover.svg" />
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+    <link rel="manifest" href="../../site.webmanifest" />
+    <title>Void Relay | Lunerya</title>
+    <script type="module" src="../../src/project-detail.js"></script>
+  </head>
+  <body data-page-kind="projects" class="min-w-[320px] bg-void-950 text-mist-50 antialiased">
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-30 bg-void-gradient opacity-90"></div>
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-20 cosmic-grid opacity-60"></div>
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 scanline opacity-40"></div>
+    
+    <header data-site-header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 transition-all duration-300">
+      <nav class="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 md:px-8 lg:px-10">
+        <a href="../../" class="group inline-flex items-center gap-3">
+          <span class="logo-wordmark text-2xl font-semibold tracking-tight text-mist-50 md:text-3xl">Lunerya</span>
+          <span class="chip chip-ghost text-[0.65rem] tracking-[0.32em] text-amethyst-200">PROJECTS</span>
+        </a>
+        
+    <div class="hidden items-center gap-7 md:flex">
+      <a href="../../" data-page-link="home" class="nav-link inner-page-link">Home</a>
+      <a href="../../projects/" data-page-link="projects" class="nav-link inner-page-link">Projects</a>
+      <a href="../../tools/" data-page-link="tools" class="nav-link inner-page-link">Tools</a>
+      <a href="../../blog/" data-page-link="journal" class="nav-link inner-page-link">Journal</a>
+      <a href="../../#contact" data-page-link="contact" class="nav-link inner-page-link">Contact</a>
+    </div>
+  
+        <div class="flex items-center gap-3">
+          <a href="../../#contact" class="void-button hidden md:inline-flex">
+            Connect
+            <i data-lucide="arrow-right"></i>
+          </a>
+          <button
+            type="button"
+            data-menu-toggle
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/15 bg-white/5 text-mist-50 transition hover:border-amethyst-200/60 hover:bg-white/10 md:hidden"
+          >
+            <span class="sr-only">Open navigation</span>
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+  
+    
+    <div id="mobile-menu" data-mobile-menu hidden class="fixed inset-0 z-[60] bg-void-950/95 px-6 py-6 backdrop-blur-xl">
+      <div class="mx-auto flex h-full w-full max-w-lg flex-col rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-void-glow">
+        <div class="flex items-center justify-between">
+          <span class="logo-wordmark text-2xl font-semibold tracking-tight text-mist-50">Lunerya</span>
+          <button
+            type="button"
+            data-menu-close
+            class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/15 bg-white/5 text-mist-50 transition hover:border-amethyst-200/60 hover:bg-white/10"
+          >
+            <span class="sr-only">Close navigation</span>
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <div class="mt-12 flex flex-1 flex-col justify-between">
+          
+    <div class="flex flex-col gap-4">
+      <a href="../../" data-menu-close data-page-link="home" class="mobile-nav-link">Home</a>
+      <a href="../../projects/" data-menu-close data-page-link="projects" class="mobile-nav-link">Projects</a>
+      <a href="../../tools/" data-menu-close data-page-link="tools" class="mobile-nav-link">Tools</a>
+      <a href="../../blog/" data-menu-close data-page-link="journal" class="mobile-nav-link">Journal</a>
+      <a href="../../#contact" data-menu-close data-page-link="contact" class="mobile-nav-link">Contact</a>
+    </div>
+  
+
+          <div class="glass-panel mt-12 rounded-[1.75rem] p-5">
+            <div class="eyebrow text-amethyst-200">Signal Route</div>
+            <a href="mailto:serhat.yavuz@agu.edu.tr" class="mt-4 inline-flex items-center gap-3 text-lg font-medium text-mist-50 transition hover:text-topaz-300">
+              <i data-lucide="mail"></i>
+              serhat.yavuz@agu.edu.tr
+            </a>
+            <p class="mt-4 text-sm text-mist-200/70">
+              Available for premium product design, frontend systems, and immersive interface builds.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <main class="relative z-10 pb-24 pt-28">
+    <section class="section-shell !pb-16 !pt-10">
+      <div class="section-inner">
+        <a href="../" class="detail-back-link"><i data-lucide="arrow-left"></i>Back to Projects</a>
+
+        <article data-project-detail data-project-slug="void-relay" class="detail-shell mt-8">
+          <div class="detail-kicker">
+            <span class="section-kicker text-topaz-300">Project Detail</span>
+            <span class="chip chip-ghost">Frontend Architecture</span>
+          </div>
+          <h1 class="detail-title">Void Relay</h1>
+          <p class="detail-excerpt">Void Relay is the architectural layer behind premium frontend builds where rendering boundaries, enhancement strategy, and deployment clarity matter as much as the visuals.</p>
+          <div class="detail-meta">
+            <span>Frontend Architecture</span>
+            <span>2026</span>
+            <span>Architecture Track</span>
+          </div>
+          <div class="detail-chip-row"><span class="chip">Node.js</span><span class="chip">Vercel</span><span class="chip">Netlify</span><span class="chip">Architecture</span><span class="chip">Progressive Enhancement</span><span class="chip">Static Delivery</span></div>
+
+          <div class="detail-grid">
+            <section class="detail-panel">
+              <p class="detail-panel__label">Role</p>
+              <div class="detail-panel__value">System Architect &amp; Developer</div>
+              
+    <ul class="detail-list">
+      <li>Module boundaries</li><li>Deployment strategy</li><li>Operational guardrails</li>
+    </ul>
+  
+            </section>
+            <section class="detail-panel">
+              <p class="detail-panel__label">Highlights</p>
+              
+    <div class="detail-highlights">
+      
+            <div class="detail-highlight">
+              <span class="detail-highlight__label">Rendering Model</span>
+              <strong class="detail-highlight__value">Static output</strong>
+            </div>
+          
+            <div class="detail-highlight">
+              <span class="detail-highlight__label">Target Hosts</span>
+              <strong class="detail-highlight__value">Vercel / Netlify / GitHub Pages</strong>
+            </div>
+          
+            <div class="detail-highlight">
+              <span class="detail-highlight__label">Core Principle</span>
+              <strong class="detail-highlight__value">Motion never owns content</strong>
+            </div>
+          
+    </div>
+  
+            </section>
+          </div>
+
+          
+    <div class="detail-sections">
+      
+            <section class="detail-section">
+              <h2 class="detail-section__title">Challenge</h2>
+              <div class="detail-section__copy">
+                <p>Export-heavy concepts often arrive with tangled markup, duplicate behaviors, and no clear path to production. The challenge was to turn that kind of visual output into a maintainable frontend base.</p><p>The solution needed to support premium motion and atmosphere without giving up the predictability of static delivery or the ability to reason about modules cleanly.</p>
+              </div>
+            </section>
+          
+            <section class="detail-section">
+              <h2 class="detail-section__title">System Decisions</h2>
+              <div class="detail-section__copy">
+                <p>Void Relay separates content rendering, UI behavior, timeline ownership, and WebGL enhancement into explicit modules. Each layer has a narrow job and can fail gracefully without collapsing the page.</p><p>Deployment assumptions are built into the architecture from the start. Relative paths, base-aware links, and generated routes are treated as part of the system design rather than a post-build patch.</p>
+              </div>
+            </section>
+          
+            <section class="detail-section">
+              <h2 class="detail-section__title">Outcome</h2>
+              <div class="detail-section__copy">
+                <p>The architecture supports immersive interfaces without losing maintainability. Teams can iterate on visuals and motion while keeping a stable content model and predictable deployment story.</p><p>Void Relay is less about a single screen and more about protecting the quality of the whole product surface over time.</p>
+              </div>
+            </section>
+          
+    </div>
+  
+
+          <div class="mt-10 flex flex-wrap gap-4"><a href="https://github.com/serhatvs/personal-site" class="void-button void-button-ghost" target="_blank" rel="noreferrer">Repository <i data-lucide="arrow-up-right"></i></a></div>
+        </article>
+
+        <section class="mt-16">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Related Cases</p>
+              <h2 class="text-3xl font-display font-semibold tracking-[-0.05em] text-mist-50 md:text-4xl">Continue Through The Work</h2>
+            </div>
+            <p class="max-w-xl text-sm leading-7 text-mist-200/65 md:text-base">
+              Adjacent projects with overlapping constraints, similar architecture decisions, or related delivery patterns.
+            </p>
+          </div>
+          <div data-related-projects class="detail-related-grid mt-10"></div>
+        </section>
+
+        <article class="editorial-cta-panel">
+          <p class="eyebrow text-topaz-300">Build with Intent</p>
+          <h2 class="mt-4 max-w-2xl text-3xl font-display font-semibold tracking-[-0.05em] text-mist-50 md:text-4xl">
+            Need this level of frontend thinking in a real product or launch surface?
+          </h2>
+          <p class="mt-6 max-w-2xl text-sm leading-7 text-mist-200/70 md:text-base">
+            The same architecture discipline behind these cases can shape premium product pages, systems work, and motion-heavy frontend delivery.
+          </p>
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a href="../../#contact" class="void-button">Start a conversation<i data-lucide="send"></i></a>
+            <a href="../../tools/" class="void-button void-button-ghost">Explore tools<i data-lucide="arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+    
+    <footer class="relative z-10 border-t border-white/10 bg-black/20">
+      <div class="mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 py-10 md:px-8 lg:px-10">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <div class="logo-wordmark text-2xl font-semibold tracking-tight text-mist-50">Lunerya</div>
+            <p class="mt-2 text-sm text-mist-200/60">Project cases on systems, interaction design, and premium frontend execution.</p>
+          </div>
+          <div data-socials-footer data-social-style="footer" class="flex flex-wrap gap-3"></div>
+        </div>
+        <div class="flex flex-col gap-5 border-t border-white/10 pt-6 text-sm text-mist-200/55 md:flex-row md:items-center md:justify-between">
+          <p>&copy; <span data-current-year></span> Lunerya. Void Edition.</p>
+          <a href="../../#contact" class="transition hover:text-topaz-300">serhat.yavuz@agu.edu.tr</a>
+        </div>
+      </div>
+    </footer>
+  
+  </body>
+</html>

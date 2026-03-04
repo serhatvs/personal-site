@@ -1,4 +1,6 @@
 import { blogManifest } from '@/generated/blog-manifest.js'
+import { projectsManifest } from '@/generated/projects-manifest.js'
+import { toolsManifest } from '@/generated/tools-manifest.js'
 import { siteContent } from '@/data/site-content.js'
 import { renderBlogPreview } from '../render/render-blog-preview.js'
 import { renderProjects } from '../render/render-projects.js'
@@ -16,9 +18,14 @@ import { getElements } from './selectors.js'
 export function bootstrap() {
   const dom = getElements()
 
-  renderProjects(dom.projects, siteContent.projects)
+  renderProjects(dom.projects, projectsManifest, {
+    previewCount: siteContent.projectsSection.previewCount,
+    archiveCtaLabel: siteContent.projectsSection.archiveCtaLabel,
+  })
   renderBlogPreview(dom.blogPreview, blogManifest, { previewCount: siteContent.journal.previewCount })
-  renderStack(dom.stack, siteContent.stack)
+  renderStack(dom.stack, toolsManifest, {
+    archiveCtaLabel: siteContent.toolsSection.archiveCtaLabel,
+  })
   renderStats(dom.stats, siteContent.stats)
   renderSocials(dom.socials, siteContent.socials)
 

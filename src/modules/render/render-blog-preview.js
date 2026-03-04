@@ -1,4 +1,5 @@
-import { formatBlogDate, formatReadingTime, getJournalHref, getPreviewPosts } from './blog-utils.js'
+import { formatBlogDate, formatReadingTime, getPreviewPosts } from './blog-utils.js'
+import { getJournalHref } from './content-utils.js'
 
 function renderTags(tags) {
   return tags

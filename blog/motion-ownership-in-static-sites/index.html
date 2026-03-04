@@ -19,7 +19,7 @@
     <title>Motion Ownership in Static Sites | Lunerya Journal</title>
     <script type="module" src="../../src/blog-post.js"></script>
   </head>
-  <body class="min-w-[320px] bg-void-950 text-mist-50 antialiased">
+  <body data-page-kind="journal" class="min-w-[320px] bg-void-950 text-mist-50 antialiased">
     <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-30 bg-void-gradient opacity-90"></div>
     <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-20 cosmic-grid opacity-60"></div>
     <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 scanline opacity-40"></div>
@@ -31,11 +31,15 @@
           <span class="chip chip-ghost text-[0.65rem] tracking-[0.32em] text-amethyst-200">JOURNAL</span>
         </a>
 
-        <div class="hidden items-center gap-7 md:flex">
-          <a href="../../" class="nav-link">Home</a>
-          <a href="../" class="nav-link is-active">Journal</a>
-          <a href="../../#contact" class="nav-link">Contact</a>
-        </div>
+        
+    <div class="hidden items-center gap-7 md:flex">
+      <a href="../../" data-page-link="home" class="nav-link inner-page-link">Home</a>
+      <a href="../../projects/" data-page-link="projects" class="nav-link inner-page-link">Projects</a>
+      <a href="../../tools/" data-page-link="tools" class="nav-link inner-page-link">Tools</a>
+      <a href="../../blog/" data-page-link="journal" class="nav-link inner-page-link">Journal</a>
+      <a href="../../#contact" data-page-link="contact" class="nav-link inner-page-link">Contact</a>
+    </div>
+  
 
         <div class="flex items-center gap-3">
           <a href="../../#contact" class="void-button hidden md:inline-flex">
@@ -72,11 +76,15 @@
         </div>
 
         <div class="mt-12 flex flex-1 flex-col justify-between">
-          <div class="flex flex-col gap-4">
-            <a href="../../" data-menu-close class="mobile-nav-link">Home</a>
-            <a href="../" data-menu-close class="mobile-nav-link">Journal</a>
-            <a href="../../#contact" data-menu-close class="mobile-nav-link">Contact</a>
-          </div>
+          
+    <div class="flex flex-col gap-4">
+      <a href="../../" data-menu-close data-page-link="home" class="mobile-nav-link">Home</a>
+      <a href="../../projects/" data-menu-close data-page-link="projects" class="mobile-nav-link">Projects</a>
+      <a href="../../tools/" data-menu-close data-page-link="tools" class="mobile-nav-link">Tools</a>
+      <a href="../../blog/" data-menu-close data-page-link="journal" class="mobile-nav-link">Journal</a>
+      <a href="../../#contact" data-menu-close data-page-link="contact" class="mobile-nav-link">Contact</a>
+    </div>
+  
 
           <div class="glass-panel mt-12 rounded-[1.75rem] p-5">
             <div class="eyebrow text-amethyst-200">Signal Route</div>
@@ -206,7 +214,7 @@ gsap.from(card, { y: 24, opacity: 0, duration: 0.7 })
                 Start a conversation
                 <i data-lucide="send"></i>
               </a>
-              <a href="../../#projects" class="void-button void-button-ghost">
+              <a href="../../projects/" class="void-button void-button-ghost">
                 View projects
                 <i data-lucide="arrow-right"></i>
               </a>
@@ -228,7 +236,7 @@ gsap.from(card, { y: 24, opacity: 0, duration: 0.7 })
         </div>
 
         <div class="flex flex-col gap-5 border-t border-white/10 pt-6 text-sm text-mist-200/55 md:flex-row md:items-center md:justify-between">
-          <p>© <span data-current-year></span> Lunerya. Journal edition.</p>
+          <p>&copy; <span data-current-year></span> Lunerya. Journal edition.</p>
           <a href="../../#contact" class="transition hover:text-topaz-300">serhat.yavuz@agu.edu.tr</a>
         </div>
       </div>

@@ -1,4 +1,5 @@
-import { formatBlogDate, formatReadingTime, getRelatedPosts } from './blog-utils.js'
+import { formatBlogDate, formatReadingTime } from './blog-utils.js'
+import { getRelatedByTags } from './content-utils.js'
 
 function renderTags(tags) {
   return tags
@@ -12,7 +13,13 @@ export function renderRelatedPosts(container, currentPost, posts) {
     return
   }
 
-  const relatedPosts = getRelatedPosts(posts, currentPost, 3)
+  const relatedPosts = getRelatedByTags(
+    posts,
+    currentPost,
+    3,
+    () => 0,
+    (left, right) => new Date(right.publishedAt).getTime() - new Date(left.publishedAt).getTime(),
+  )
 
   if (!relatedPosts.length) {
     container.innerHTML = `
