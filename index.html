@@ -668,9 +668,13 @@
                     type="submit"
                     data-submit-button
                     data-interaction="button"
-                    class="void-button w-full justify-center md:w-auto"
+                    class="void-button w-full justify-center whitespace-nowrap md:w-auto md:shrink-0"
                   >
-                    &nbsp;Send message
+                    <span
+                      aria-hidden="true"
+                      class="inline-block h-[1.05rem] w-[1.05rem] opacity-0"
+                    ></span>
+                    <span>Send message</span>
                     <i data-lucide="send"></i>
                   </button>
                 </div>
