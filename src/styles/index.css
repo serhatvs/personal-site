@@ -216,6 +216,13 @@
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
   }
 
+  .contact-note__copy {
+    @apply mt-3 text-sm leading-6 text-mist-200/70;
+    text-align: justify;
+    text-align-last: left;
+    text-wrap: pretty;
+  }
+
   .contact-note__status {
     @apply mt-3 min-h-6 text-sm text-amethyst-100;
   }
