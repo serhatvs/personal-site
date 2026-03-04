@@ -1,0 +1,206 @@
+.admin-topbar {
+  @apply flex flex-col gap-4 md:flex-row md:items-center md:justify-between;
+}
+
+.admin-status-badge {
+  @apply inline-flex items-center gap-3 self-start rounded-full border px-4 py-3 text-[0.68rem] font-medium uppercase tracking-[0.28em];
+}
+
+.admin-status-badge--live {
+  @apply border-topaz-300/35 bg-topaz-300/10 text-topaz-50;
+}
+
+.admin-status-badge--static {
+  @apply border-white/10 bg-white/5 text-mist-200/75;
+}
+
+.admin-hero {
+  @apply mt-8 grid gap-6 rounded-[2.25rem] p-8 md:grid-cols-[minmax(0,1.25fr)_minmax(18rem,0.75fr)] md:p-10;
+}
+
+.admin-hero__copy {
+  @apply mt-6 max-w-3xl text-base leading-8 text-mist-200/70 md:text-lg;
+}
+
+.admin-hero__meta {
+  @apply grid gap-4 self-start;
+}
+
+.admin-hero__meta-card {
+  @apply rounded-[1.5rem] border border-white/10 bg-black/20 p-5;
+}
+
+.admin-hero__meta-card strong {
+  @apply mt-3 block text-xl font-display font-semibold tracking-[-0.04em] text-mist-50;
+}
+
+.admin-disabled-note {
+  @apply mt-6 flex flex-col gap-2 rounded-[1.5rem] border border-white/10 bg-black/20 px-5 py-4 text-sm text-mist-200/70 md:flex-row md:items-center md:justify-between;
+}
+
+.admin-tabs {
+  @apply mt-8 flex flex-wrap gap-3;
+}
+
+.admin-tab {
+  @apply inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-medium uppercase tracking-[0.22em] text-mist-200/75 transition;
+}
+
+.admin-tab:hover {
+  @apply border-amethyst-200/45 bg-white/10 text-mist-50;
+}
+
+.admin-tab.is-active {
+  @apply border-topaz-300/40 bg-topaz-300/10 text-topaz-50;
+}
+
+.admin-grid {
+  @apply grid gap-6 xl:grid-cols-[minmax(0,1.2fr)_22rem];
+}
+
+.admin-panel {
+  @apply rounded-[2rem] p-6 md:p-8;
+}
+
+.admin-panel__header {
+  @apply flex flex-col gap-4 md:flex-row md:items-start md:justify-between;
+}
+
+.admin-panel__title {
+  @apply mt-4 text-3xl font-display font-semibold tracking-[-0.05em] text-mist-50 md:text-[2.25rem];
+}
+
+.admin-sidebar {
+  @apply rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-panel backdrop-blur-glass;
+}
+
+.admin-sidebar__header {
+  @apply space-y-3;
+}
+
+.admin-form {
+  @apply mt-8 space-y-6;
+}
+
+.admin-form-grid {
+  @apply grid gap-5 md:grid-cols-2;
+}
+
+.admin-form-grid--compact {
+  @apply md:grid-cols-2;
+}
+
+.admin-form-grid--triple {
+  @apply md:grid-cols-3;
+}
+
+.admin-select {
+  appearance: none;
+}
+
+.admin-textarea--medium {
+  min-height: 8.5rem;
+}
+
+.admin-textarea--xl {
+  min-height: 18rem;
+}
+
+.admin-checkbox {
+  @apply inline-flex items-center gap-3 rounded-[1.4rem] border border-white/10 bg-white/5 px-4 py-4 text-sm text-mist-100/80;
+}
+
+.admin-checkbox input {
+  accent-color: #e6a520;
+}
+
+.admin-checkbox--align-end {
+  @apply justify-start md:self-end;
+}
+
+.admin-section-header {
+  @apply flex items-center justify-between gap-4;
+}
+
+.admin-section-list {
+  @apply mt-4 space-y-4;
+}
+
+.admin-section-card {
+  @apply rounded-[1.6rem] border border-white/10 bg-black/20 p-5;
+}
+
+.admin-section-card__toolbar {
+  @apply mb-4 flex items-center justify-between gap-4;
+}
+
+.admin-link-button {
+  @apply text-xs uppercase tracking-[0.24em] text-topaz-300 transition hover:text-topaz-50;
+}
+
+.admin-submit-row {
+  @apply flex flex-wrap items-center gap-4 pt-2;
+}
+
+.admin-submit-row .void-button[disabled] {
+  @apply cursor-not-allowed border-white/10 bg-white/5 text-mist-200/45;
+  box-shadow: none;
+}
+
+.admin-helper {
+  @apply text-sm leading-6 text-mist-200/60;
+}
+
+.admin-helper code {
+  @apply rounded-md bg-black/20 px-2 py-1 text-mist-100/80;
+}
+
+.admin-helper--error {
+  @apply text-topaz-300;
+}
+
+.admin-empty {
+  @apply mt-6 rounded-[1.4rem] border border-white/10 bg-black/20 px-4 py-5 text-sm text-mist-200/60;
+}
+
+.admin-summary-list {
+  @apply mt-6 space-y-3;
+}
+
+.admin-summary-item {
+  @apply flex items-start justify-between gap-4 rounded-[1.4rem] border border-white/10 bg-black/20 px-4 py-4;
+}
+
+.admin-summary-item strong {
+  @apply block text-sm font-medium text-mist-50;
+}
+
+.admin-summary-item span {
+  @apply mt-2 block text-xs uppercase tracking-[0.22em] text-mist-200/55;
+}
+
+.admin-summary-item__meta {
+  @apply flex items-center gap-2;
+}
+
+.admin-summary-link {
+  @apply inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-topaz-300 transition hover:text-topaz-50;
+}
+
+.admin-message {
+  @apply flex flex-col gap-3 rounded-[1.4rem] border px-4 py-4 text-sm;
+}
+
+.admin-message--success {
+  @apply border-topaz-300/25 bg-topaz-300/10 text-topaz-50;
+}
+
+.admin-message--error {
+  @apply border-amethyst-200/25 bg-amethyst-200/10 text-mist-50;
+}
+
+@media (max-width: 1023px) {
+  .admin-grid {
+    @apply grid-cols-1;
+  }
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Local content admin for Lunerya. Add blog entries, projects, and tech stack items while running the Vite dev server." />
+    <meta name="theme-color" content="#0f0518" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="manifest" href="../site.webmanifest" />
+    <title>Lunerya Admin</title>
+    <script type="module" src="../src/admin.js"></script>
+  </head>
+  <body class="min-w-[320px] bg-void-950 text-mist-50 antialiased">
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-30 bg-void-gradient opacity-90"></div>
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-20 cosmic-grid opacity-60"></div>
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 scanline opacity-40"></div>
+
+    <main class="relative z-10 min-h-screen">
+      <div data-admin-app></div>
+    </main>
+
+    <noscript>
+      <section class="section-shell">
+        <div class="section-inner">
+          <div class="glass-panel rounded-[2rem] p-8">
+            <p class="section-kicker text-topaz-300">Admin</p>
+            <h1 class="mt-4 text-4xl font-display font-semibold tracking-[-0.05em] text-mist-50">JavaScript is required.</h1>
+            <p class="mt-5 max-w-2xl text-base leading-8 text-mist-200/70">
+              This route is a local authoring panel. Enable JavaScript to create blog entries, project records, and tech stack items.
+            </p>
+            <a href="../" class="void-button mt-8">Back to site</a>
+          </div>
+        </div>
+      </section>
+    </noscript>
+  </body>
+</html>
