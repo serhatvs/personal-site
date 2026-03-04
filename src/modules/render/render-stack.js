@@ -48,27 +48,37 @@ export function renderStack(container, stackItems) {
             )
             .join('')}
         </ul>
+      </div>
 
-        <div class="tech-actions">
-          <button
-            type="button"
-            class="tech-control"
-            data-tech-prev
-            data-interaction="button"
-            aria-label="Previous technology"
-          >
-            Prev
-          </button>
-          <button
-            type="button"
-            class="tech-control"
-            data-tech-next
-            data-interaction="button"
-            aria-label="Next technology"
-          >
-            Next
-          </button>
-        </div>
+      <div class="tech-actions">
+        <button
+          type="button"
+          class="tech-control"
+          data-tech-autoplay-toggle
+          data-interaction="button"
+          aria-pressed="false"
+          aria-label="Pause automatic slider rotation"
+        >
+          Pause Auto
+        </button>
+        <button
+          type="button"
+          class="tech-control"
+          data-tech-prev
+          data-interaction="button"
+          aria-label="Previous technology"
+        >
+          Prev
+        </button>
+        <button
+          type="button"
+          class="tech-control"
+          data-tech-next
+          data-interaction="button"
+          aria-label="Next technology"
+        >
+          Next
+        </button>
       </div>
 
       <div class="tech-drag-proxy" data-tech-drag-proxy aria-hidden="true"></div>

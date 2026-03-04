@@ -1,3 +1,7 @@
+const CARD_TRAVEL_X_PERCENT = 268
+const CARD_INACTIVE_SCALE = 0.87
+const CARD_INACTIVE_OPACITY = 0.32
+
 function buildCardAnimation(card, gsap) {
   const timeline = gsap.timeline()
 
@@ -5,8 +9,8 @@ function buildCardAnimation(card, gsap) {
     .fromTo(
       card,
       {
-        scale: 0.82,
-        opacity: 0.28,
+        scale: CARD_INACTIVE_SCALE,
+        opacity: CARD_INACTIVE_OPACITY,
         zIndex: 1,
       },
       {
@@ -22,9 +26,9 @@ function buildCardAnimation(card, gsap) {
     )
     .fromTo(
       card,
-      { xPercent: 240 },
+      { xPercent: CARD_TRAVEL_X_PERCENT },
       {
-        xPercent: -240,
+        xPercent: -CARD_TRAVEL_X_PERCENT,
         duration: 1,
         ease: 'none',
         immediateRender: false,
@@ -81,18 +85,20 @@ function buildSeamlessLoop(items, spacing, gsap) {
 }
 
 export function initTechSlider({ gsap, Draggable }) {
-  const gallery = document.querySelector('[data-tech-gallery]')
+  const shell = document.querySelector('.tech-gallery-shell')
+  const gallery = shell?.querySelector('[data-tech-gallery]')
 
   if (!gallery || gallery.dataset.techSliderReady === 'true') {
     return
   }
 
   const cards = gsap.utils.toArray('[data-tech-card]', gallery)
-  const previousButton = gallery.querySelector('[data-tech-prev]')
-  const nextButton = gallery.querySelector('[data-tech-next]')
-  const dragProxy = document.querySelector('[data-tech-drag-proxy]')
+  const autoplayToggle = shell.querySelector('[data-tech-autoplay-toggle]')
+  const previousButton = shell.querySelector('[data-tech-prev]')
+  const nextButton = shell.querySelector('[data-tech-next]')
+  const dragProxy = shell.querySelector('[data-tech-drag-proxy]')
 
-  if (!previousButton || !nextButton || !dragProxy || cards.length < 2) {
+  if (!autoplayToggle || !previousButton || !nextButton || !dragProxy || cards.length < 2) {
     return
   }
 
@@ -100,36 +106,46 @@ export function initTechSlider({ gsap, Draggable }) {
   gallery.classList.add('is-enhanced')
 
   gsap.set(cards, {
-    xPercent: 240,
-    opacity: 0.28,
-    scale: 0.82,
+    xPercent: CARD_TRAVEL_X_PERCENT,
+    opacity: CARD_INACTIVE_OPACITY,
+    scale: CARD_INACTIVE_SCALE,
     zIndex: 1,
   })
 
-  const spacing = 0.12
+  const spacing = 0.195
   const snap = gsap.utils.snap(spacing)
   const seamlessLoop = buildSeamlessLoop(cards, spacing, gsap)
   const wrapTime = gsap.utils.wrap(0, seamlessLoop.duration())
   const playhead = { offset: 0 }
-  const autoplayUnitsPerSecond = spacing * 0.85
+  const autoplayUnitsPerSecond = spacing * 0.2
   let dragStartOffset = 0
-  let paused = false
+  let interactionPaused = false
+  let autoplayEnabled = true
   let offsetTween
 
   const render = () => {
     seamlessLoop.totalTime(wrapTime(playhead.offset))
   }
 
-  const resume = () => {
-    paused = false
+  const syncAutoplayToggle = () => {
+    autoplayToggle.textContent = autoplayEnabled ? 'Pause Auto' : 'Resume Auto'
+    autoplayToggle.setAttribute('aria-pressed', String(!autoplayEnabled))
+    autoplayToggle.setAttribute(
+      'aria-label',
+      autoplayEnabled ? 'Pause automatic slider rotation' : 'Resume automatic slider rotation',
+    )
   }
 
-  const pause = () => {
-    paused = true
+  const resumeInteraction = () => {
+    interactionPaused = false
+  }
+
+  const pauseInteraction = () => {
+    interactionPaused = true
   }
 
   const tweenToOffset = (targetOffset) => {
-    pause()
+    pauseInteraction()
     offsetTween?.kill()
 
     offsetTween = gsap.to(playhead, {
@@ -140,7 +156,7 @@ export function initTechSlider({ gsap, Draggable }) {
       onUpdate: render,
       onComplete: () => {
         offsetTween = undefined
-        resume()
+        resumeInteraction()
       },
       onInterrupt: () => {
         offsetTween = undefined
@@ -149,7 +165,7 @@ export function initTechSlider({ gsap, Draggable }) {
   }
 
   const ticker = (_, deltaMs = 16.67) => {
-    if (paused) {
+    if (interactionPaused || !autoplayEnabled) {
       return
     }
 
@@ -165,12 +181,17 @@ export function initTechSlider({ gsap, Draggable }) {
     tweenToOffset(playhead.offset + spacing)
   })
 
+  autoplayToggle.addEventListener('click', () => {
+    autoplayEnabled = !autoplayEnabled
+    syncAutoplayToggle()
+  })
+
   Draggable.create(dragProxy, {
     type: 'x',
     trigger: gallery,
     dragClickables: false,
     onPress() {
-      pause()
+      pauseInteraction()
       offsetTween?.kill()
       offsetTween = undefined
       dragStartOffset = playhead.offset
@@ -178,7 +199,7 @@ export function initTechSlider({ gsap, Draggable }) {
       gsap.set(dragProxy, { x: 0 })
     },
     onDrag() {
-      const pixelsPerStep = Math.max(gallery.clientWidth * 0.22, 1)
+      const pixelsPerStep = Math.max(gallery.clientWidth * 0.285, 1)
       playhead.offset = dragStartOffset - (this.x / pixelsPerStep) * spacing
       render()
     },
@@ -189,6 +210,7 @@ export function initTechSlider({ gsap, Draggable }) {
     },
   })
 
+  syncAutoplayToggle()
   render()
   gsap.ticker.add(ticker)
 }
