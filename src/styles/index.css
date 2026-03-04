@@ -178,10 +178,6 @@
     @apply border-amethyst-200/50 bg-white/10 text-amethyst-50;
   }
 
-  .contact-submit-button {
-    @apply md:min-w-[16rem] md:flex-none;
-  }
-
   .nav-link {
     @apply relative text-sm font-medium uppercase tracking-[0.22em] text-mist-200/60 transition hover:text-mist-50;
   }
