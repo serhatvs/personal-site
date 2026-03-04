@@ -445,12 +445,6 @@
   color: rgba(255, 248, 231, 0.95);
 }
 
-.tech-control[aria-pressed='true'] {
-  border-color: rgba(197, 157, 217, 0.3);
-  background: rgba(43, 13, 62, 0.82);
-  color: rgba(242, 234, 247, 0.95);
-}
-
 .tech-drag-proxy {
   position: absolute;
   visibility: hidden;
