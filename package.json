@@ -1,0 +1,23 @@
+{
+  "name": "lunerya-void",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --host"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3.4.17",
+    "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "animejs": "^4.3.6",
+    "gsap": "^3.14.2",
+    "lucide": "^0.577.0",
+    "three": "^0.183.2"
+  }
+}

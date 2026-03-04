@@ -1,0 +1,16 @@
+{
+  "name": "Lunerya Void Edition",
+  "short_name": "Lunerya",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0f0518",
+  "theme_color": "#0f0518",
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
