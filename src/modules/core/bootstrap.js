@@ -1,4 +1,6 @@
+import { blogManifest } from '@/generated/blog-manifest.js'
 import { siteContent } from '@/data/site-content.js'
+import { renderBlogPreview } from '../render/render-blog-preview.js'
 import { renderProjects } from '../render/render-projects.js'
 import { renderSocials } from '../render/render-socials.js'
 import { renderStack } from '../render/render-stack.js'
@@ -15,6 +17,7 @@ export function bootstrap() {
   const dom = getElements()
 
   renderProjects(dom.projects, siteContent.projects)
+  renderBlogPreview(dom.blogPreview, blogManifest, { previewCount: siteContent.journal.previewCount })
   renderStack(dom.stack, siteContent.stack)
   renderStats(dom.stats, siteContent.stats)
   renderSocials(dom.socials, siteContent.socials)

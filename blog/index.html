@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="Journal entries on frontend systems, motion craft, and premium static delivery from Lunerya."
+    />
+    <meta
+      name="theme-color"
+      content="#0f0518"
+    />
+    <meta
+      property="og:title"
+      content="Journal | Lunerya"
+    />
+    <meta
+      property="og:description"
+      content="Field notes on frontend systems, motion craft, and shipping premium static experiences."
+    />
+    <meta
+      property="og:type"
+      content="website"
+    />
+    <meta
+      property="og:url"
+      content="/blog/"
+    />
+    <meta
+      property="og:image"
+      content="../og-cover.svg"
+    />
+    <meta
+      property="twitter:card"
+      content="summary_large_image"
+    />
+    <meta
+      property="twitter:title"
+      content="Journal | Lunerya"
+    />
+    <meta
+      property="twitter:description"
+      content="Field notes on frontend systems, motion craft, and shipping premium static experiences."
+    />
+    <meta
+      property="twitter:image"
+      content="../og-cover.svg"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../favicon.svg"
+    />
+    <link
+      rel="manifest"
+      href="../site.webmanifest"
+    />
+    <title>Journal | Lunerya</title>
+    <script
+      type="module"
+      src="../src/blog-index.js"
+    ></script>
+  </head>
+  <body class="min-w-[320px] bg-void-950 text-mist-50 antialiased">
+    <div
+      aria-hidden="true"
+      class="pointer-events-none fixed inset-0 -z-30 bg-void-gradient opacity-90"
+    ></div>
+    <div
+      aria-hidden="true"
+      class="pointer-events-none fixed inset-0 -z-20 cosmic-grid opacity-60"
+    ></div>
+    <div
+      aria-hidden="true"
+      class="pointer-events-none fixed inset-0 -z-10 scanline opacity-40"
+    ></div>
+
+    <header
+      data-site-header
+      class="fixed inset-x-0 top-0 z-50 border-b border-white/10 transition-all duration-300"
+    >
+      <nav class="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 md:px-8 lg:px-10">
+        <a
+          href="../"
+          class="group inline-flex items-center gap-3"
+        >
+          <span class="logo-wordmark text-2xl font-semibold tracking-tight text-mist-50 md:text-3xl">
+            Lunerya
+          </span>
+          <span class="chip chip-ghost text-[0.65rem] tracking-[0.32em] text-amethyst-200">
+            JOURNAL
+          </span>
+        </a>
+
+        <div class="hidden items-center gap-7 md:flex">
+          <a
+            href="../"
+            class="nav-link"
+          >
+            Home
+          </a>
+          <a
+            href="./"
+            class="nav-link is-active"
+          >
+            Journal
+          </a>
+          <a
+            href="../#contact"
+            class="nav-link"
+          >
+            Contact
+          </a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a
+            href="../#contact"
+            class="void-button hidden md:inline-flex"
+          >
+            Connect
+            <i data-lucide="arrow-right"></i>
+          </a>
+
+          <button
+            type="button"
+            data-menu-toggle
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/15 bg-white/5 text-mist-50 transition hover:border-amethyst-200/60 hover:bg-white/10 md:hidden"
+          >
+            <span class="sr-only">Open navigation</span>
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <div
+      id="mobile-menu"
+      data-mobile-menu
+      hidden
+      class="fixed inset-0 z-[60] bg-void-950/95 px-6 py-6 backdrop-blur-xl"
+    >
+      <div class="mx-auto flex h-full w-full max-w-lg flex-col rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-void-glow">
+        <div class="flex items-center justify-between">
+          <span class="logo-wordmark text-2xl font-semibold tracking-tight text-mist-50">
+            Lunerya
+          </span>
+          <button
+            type="button"
+            data-menu-close
+            class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/15 bg-white/5 text-mist-50 transition hover:border-amethyst-200/60 hover:bg-white/10"
+          >
+            <span class="sr-only">Close navigation</span>
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <div class="mt-12 flex flex-1 flex-col justify-between">
+          <div class="flex flex-col gap-4">
+            <a
+              href="../"
+              data-menu-close
+              class="mobile-nav-link"
+            >
+              Home
+            </a>
+            <a
+              href="./"
+              data-menu-close
+              class="mobile-nav-link"
+            >
+              Journal
+            </a>
+            <a
+              href="../#contact"
+              data-menu-close
+              class="mobile-nav-link"
+            >
+              Contact
+            </a>
+          </div>
+
+          <div class="glass-panel mt-12 rounded-[1.75rem] p-5">
+            <div class="eyebrow text-amethyst-200">Signal Route</div>
+            <a
+              href="mailto:serhat.yavuz@agu.edu.tr"
+              class="mt-4 inline-flex items-center gap-3 text-lg font-medium text-mist-50 transition hover:text-topaz-300"
+            >
+              <i data-lucide="mail"></i>
+              serhat.yavuz@agu.edu.tr
+            </a>
+            <p class="mt-4 text-sm text-mist-200/70">
+              Available for premium product design, frontend systems, and immersive interface builds.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="relative z-10 pt-28">
+      <section class="section-shell">
+        <div class="section-inner">
+          <div class="max-w-3xl">
+            <p class="section-kicker text-amethyst-200">Field Notes</p>
+            <h1 class="section-title mt-4">Journal</h1>
+            <p class="mt-6 text-base leading-8 text-mist-200/72 md:text-lg">
+              Notes on frontend systems, motion craft, AI presentation work, and the discipline required to ship premium static experiences cleanly.
+            </p>
+          </div>
+
+          <div
+            data-blog-archive
+            class="mt-14 grid gap-6 lg:grid-cols-2"
+          >
+            <article class="glass-panel rounded-[2rem] p-8 text-sm text-mist-200/70">
+              Loading journal archive.
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="relative z-10 border-t border-white/10 bg-black/20">
+      <div class="mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 py-10 md:px-8 lg:px-10">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <div class="logo-wordmark text-2xl font-semibold tracking-tight text-mist-50">
+              Lunerya
+            </div>
+            <p class="mt-2 text-sm text-mist-200/60">
+              Journal notes on systems, motion, and premium frontend delivery.
+            </p>
+          </div>
+
+          <div
+            data-socials-footer
+            data-social-style="footer"
+            class="flex flex-wrap gap-3"
+          ></div>
+        </div>
+
+        <div class="flex flex-col gap-5 border-t border-white/10 pt-6 text-sm text-mist-200/55 md:flex-row md:items-center md:justify-between">
+          <p>© <span data-current-year></span> Lunerya. Journal edition.</p>
+          <a
+            href="../#contact"
+            class="transition hover:text-topaz-300"
+          >
+            serhat.yavuz@agu.edu.tr
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

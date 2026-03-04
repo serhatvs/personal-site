@@ -7,6 +7,7 @@ export function getElements() {
     menuCloseButtons: [...document.querySelectorAll('[data-menu-close]')],
     mobileMenu: document.querySelector('[data-mobile-menu]'),
     projects: document.querySelector('[data-projects]'),
+    blogPreview: document.querySelector('[data-blog-preview]'),
     stack: document.querySelector('[data-stack]'),
     stats: document.querySelector('[data-stats]'),
     socials: [...document.querySelectorAll('[data-socials-contact], [data-socials-footer]')],

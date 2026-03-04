@@ -1,4 +1,5 @@
 import {
+  ArrowLeft,
   ArrowRight,
   ArrowUpRight,
   BadgeCheck,
@@ -21,6 +22,7 @@ import {
 } from 'lucide'
 
 const icons = {
+  ArrowLeft,
   ArrowRight,
   ArrowUpRight,
   BadgeCheck,

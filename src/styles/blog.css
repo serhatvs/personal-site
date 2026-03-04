@@ -1,0 +1,154 @@
+.journal-card {
+  @apply relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-panel backdrop-blur-glass;
+}
+
+.journal-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right, rgba(230, 165, 32, 0.12), transparent 32%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.04), transparent 56%);
+  pointer-events: none;
+}
+
+.journal-card--feature {
+  @apply lg:col-span-2;
+}
+
+.journal-card__meta,
+.blog-post-meta {
+  @apply flex flex-wrap items-center gap-3 text-sm text-mist-200/60;
+}
+
+.journal-card__reading {
+  @apply text-sm text-mist-200/60;
+}
+
+.journal-card__title {
+  @apply relative z-10 mt-6 text-[clamp(1.65rem,3vw,2.45rem)] font-display font-semibold tracking-[-0.05em] text-mist-50;
+}
+
+.journal-card__excerpt {
+  @apply relative z-10 mt-4 flex-1 text-sm leading-7 text-mist-200/70 md:text-base;
+}
+
+.journal-card__tags,
+.blog-tag-row {
+  @apply relative z-10 mt-6 flex flex-wrap gap-2;
+}
+
+.journal-card__footer {
+  @apply relative z-10 mt-8 flex flex-wrap items-center justify-between gap-4;
+}
+
+.journal-preview-grid {
+  @apply grid gap-6 lg:grid-cols-3;
+}
+
+.journal-back-link {
+  @apply inline-flex items-center gap-3 text-sm uppercase tracking-[0.24em] text-mist-200/60 transition hover:text-topaz-300;
+}
+
+.blog-post-shell,
+.journal-nav-card {
+  background: var(--panel-fill);
+  border: 1px solid var(--panel-stroke);
+  box-shadow: var(--panel-shadow);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.blog-post-shell {
+  @apply mx-auto max-w-[72ch] rounded-[2.25rem] p-8 md:p-12;
+}
+
+.blog-post-kicker {
+  @apply flex flex-wrap items-center gap-3;
+}
+
+.blog-post-title {
+  @apply mt-8 text-[clamp(2.8rem,6vw,4.9rem)] font-display font-semibold leading-[0.96] tracking-[-0.06em] text-mist-50;
+}
+
+.blog-post-excerpt {
+  @apply mt-6 max-w-3xl text-base leading-8 text-mist-200/75 md:text-xl md:leading-9;
+}
+
+.blog-prose {
+  @apply mt-10 text-base leading-8 text-mist-100/90;
+}
+
+.blog-prose > * + * {
+  margin-top: 1.35rem;
+}
+
+.blog-prose h2 {
+  @apply mt-14 font-display text-3xl font-semibold tracking-[-0.05em] text-mist-50 md:text-4xl;
+}
+
+.blog-prose h3 {
+  @apply mt-12 font-display text-2xl font-semibold tracking-[-0.04em] text-mist-50 md:text-3xl;
+}
+
+.blog-prose p,
+.blog-prose li {
+  @apply text-base leading-8 text-mist-100/90;
+}
+
+.blog-prose ul,
+.blog-prose ol {
+  @apply ml-6 space-y-3;
+}
+
+.blog-prose ul {
+  list-style: disc;
+}
+
+.blog-prose ol {
+  list-style: decimal;
+}
+
+.blog-prose a {
+  @apply text-topaz-300 underline decoration-topaz-300/35 underline-offset-4 transition hover:text-topaz-100;
+}
+
+.blog-prose strong {
+  @apply font-semibold text-mist-50;
+}
+
+.blog-prose blockquote {
+  @apply rounded-[1.6rem] border-l-2 border-amethyst-200/60 bg-white/[0.03] px-6 py-5 text-mist-100/80;
+}
+
+.blog-prose code {
+  @apply rounded-md bg-white/10 px-2 py-1 text-sm text-topaz-100;
+}
+
+.blog-prose pre {
+  @apply overflow-x-auto rounded-[1.6rem] border border-white/10 bg-black/35 p-5 text-sm leading-7 text-mist-100/85;
+}
+
+.blog-prose pre code {
+  @apply bg-transparent p-0 text-inherit;
+}
+
+.blog-prose img {
+  @apply h-auto max-w-full rounded-[1.6rem] border border-white/10;
+}
+
+.journal-nav-grid {
+  @apply grid gap-6 md:grid-cols-2;
+}
+
+.journal-nav-card {
+  @apply block rounded-[2rem] p-6 transition hover:border-amethyst-200/30;
+}
+
+.journal-nav-card--next {
+  @apply md:text-right;
+}
+
+.journal-nav-card--empty {
+  @apply opacity-80;
+}

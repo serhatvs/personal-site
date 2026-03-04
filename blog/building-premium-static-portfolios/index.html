@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="How to build a premium static portfolio with intentional motion, editorial hierarchy, and deploy-safe architecture." />
+    <meta name="theme-color" content="#0f0518" />
+    <meta property="og:title" content="Building Premium Static Portfolios | Lunerya Journal" />
+    <meta property="og:description" content="How to build a premium static portfolio with intentional motion, editorial hierarchy, and deploy-safe architecture." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="/blog/building-premium-static-portfolios/" />
+    <meta property="og:image" content="/og-cover.svg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Building Premium Static Portfolios | Lunerya Journal" />
+    <meta property="twitter:description" content="How to build a premium static portfolio with intentional motion, editorial hierarchy, and deploy-safe architecture." />
+    <meta property="twitter:image" content="/og-cover.svg" />
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+    <link rel="manifest" href="../../site.webmanifest" />
+    <title>Building Premium Static Portfolios | Lunerya Journal</title>
+    <script type="module" src="../../src/blog-post.js"></script>
+  </head>
+  <body class="min-w-[320px] bg-void-950 text-mist-50 antialiased">
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-30 bg-void-gradient opacity-90"></div>
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-20 cosmic-grid opacity-60"></div>
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 scanline opacity-40"></div>
+
+    <header data-site-header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 transition-all duration-300">
+      <nav class="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 md:px-8 lg:px-10">
+        <a href="../../" class="group inline-flex items-center gap-3">
+          <span class="logo-wordmark text-2xl font-semibold tracking-tight text-mist-50 md:text-3xl">Lunerya</span>
+          <span class="chip chip-ghost text-[0.65rem] tracking-[0.32em] text-amethyst-200">JOURNAL</span>
+        </a>
+
+        <div class="hidden items-center gap-7 md:flex">
+          <a href="../../" class="nav-link">Home</a>
+          <a href="../" class="nav-link is-active">Journal</a>
+          <a href="../../#contact" class="nav-link">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="../../#contact" class="void-button hidden md:inline-flex">
+            Connect
+            <i data-lucide="arrow-right"></i>
+          </a>
+
+          <button
+            type="button"
+            data-menu-toggle
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/15 bg-white/5 text-mist-50 transition hover:border-amethyst-200/60 hover:bg-white/10 md:hidden"
+          >
+            <span class="sr-only">Open navigation</span>
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <div id="mobile-menu" data-mobile-menu hidden class="fixed inset-0 z-[60] bg-void-950/95 px-6 py-6 backdrop-blur-xl">
+      <div class="mx-auto flex h-full w-full max-w-lg flex-col rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-void-glow">
+        <div class="flex items-center justify-between">
+          <span class="logo-wordmark text-2xl font-semibold tracking-tight text-mist-50">Lunerya</span>
+          <button
+            type="button"
+            data-menu-close
+            class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/15 bg-white/5 text-mist-50 transition hover:border-amethyst-200/60 hover:bg-white/10"
+          >
+            <span class="sr-only">Close navigation</span>
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <div class="mt-12 flex flex-1 flex-col justify-between">
+          <div class="flex flex-col gap-4">
+            <a href="../../" data-menu-close class="mobile-nav-link">Home</a>
+            <a href="../" data-menu-close class="mobile-nav-link">Journal</a>
+            <a href="../../#contact" data-menu-close class="mobile-nav-link">Contact</a>
+          </div>
+
+          <div class="glass-panel mt-12 rounded-[1.75rem] p-5">
+            <div class="eyebrow text-amethyst-200">Signal Route</div>
+            <a href="mailto:serhat.yavuz@agu.edu.tr" class="mt-4 inline-flex items-center gap-3 text-lg font-medium text-mist-50 transition hover:text-topaz-300">
+              <i data-lucide="mail"></i>
+              serhat.yavuz@agu.edu.tr
+            </a>
+            <p class="mt-4 text-sm text-mist-200/70">
+              Available for premium product design, frontend systems, and immersive interface builds.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="relative z-10 pb-24 pt-28">
+      <section class="section-shell !pb-16 !pt-10">
+        <div class="section-inner">
+          <a href="../" class="journal-back-link">
+            <i data-lucide="arrow-left"></i>
+            Back to Journal
+          </a>
+
+          <article data-blog-post data-blog-slug="building-premium-static-portfolios" class="blog-post-shell mt-8">
+            <div class="blog-post-kicker">
+              <span class="section-kicker text-topaz-300">Journal Entry</span>
+              <span class="chip chip-ghost">Feb 16, 2026</span>
+            </div>
+
+            <h1 class="blog-post-title">Building Premium Static Portfolios</h1>
+            <p class="blog-post-excerpt">A premium portfolio does not need a heavy app shell. It needs a sharp visual system, disciplined content structure, and clear performance budgets.</p>
+
+            <div class="blog-post-meta">
+              <span>Feb 16, 2026</span>
+              <span>1 min read</span>
+              
+            </div>
+
+            <div class="blog-tag-row">
+              <span class="chip">Portfolio</span><span class="chip">Static Sites</span><span class="chip">Design Systems</span>
+            </div>
+
+            <div class="blog-prose">
+              <p>Too many portfolios are overbuilt in the wrong places and underdesigned in the places visitors actually notice.</p>
+<h2>What matters first</h2>
+<p>The hierarchy should be obvious within a few seconds:</p>
+<ul>
+<li>what you do</li>
+<li>what kind of work you want</li>
+<li>where the proof lives</li>
+<li>how to contact you</li>
+</ul>
+<p>Everything else is support material.</p>
+<h2>Premium does not mean loud</h2>
+<p>Premium interfaces usually have fewer decisions visible at once. The page feels composed because spacing, typography, and motion are all pulling in the same direction.</p>
+<h3>A better rule of thumb</h3>
+<p>If a section cannot justify its presence in one sentence, it probably should not exist.</p>
+<p>This matters even more in portfolios because the visitor is not trying to &quot;use&quot; the product. They are evaluating taste, judgment, and technical discipline.</p>
+<h2>Static is an advantage</h2>
+<p>For portfolio work, static delivery is often the stronger default:</p>
+<ol>
+<li>fewer runtime risks</li>
+<li>cleaner hosting options</li>
+<li>better resilience on slow networks</li>
+<li>easier long-term maintenance</li>
+</ol>
+<h2>Where complexity should live</h2>
+<p>Complexity belongs in the craft, not in the navigation model.</p>
+<p>Use it in:</p>
+<ul>
+<li>motion timing</li>
+<li>art direction</li>
+<li>copy rhythm</li>
+<li>rendering boundaries</li>
+</ul>
+<p>Do not spend that budget on app behavior the visitor never asked for.</p>
+
+            </div>
+          </article>
+
+          <div class="mt-14">
+            
+    <div class="journal-nav-grid">
+      
+      <a href="../why-progressive-motion-matters/" class="journal-nav-card journal-nav-card--prev">
+        <span class="eyebrow text-amethyst-200">Previous Entry</span>
+        <strong class="mt-4 block text-xl font-semibold tracking-[-0.04em] text-mist-50">Why Progressive Motion Matters</strong>
+        <span class="mt-6 inline-flex items-center gap-3 text-sm text-mist-200/70">
+          <i data-lucide="arrow-left"></i>
+          Jan 28, 2026
+        </span>
+      </a>
+    
+      
+      <a href="../motion-ownership-in-static-sites/" class="journal-nav-card journal-nav-card--next">
+        <span class="eyebrow text-topaz-300">Next Entry</span>
+        <strong class="mt-4 block text-xl font-semibold tracking-[-0.04em] text-mist-50">Motion Ownership in Static Sites</strong>
+        <span class="mt-6 inline-flex items-center gap-3 text-sm text-mist-200/70">
+          Mar 4, 2026
+          <i data-lucide="arrow-right"></i>
+        </span>
+      </a>
+    
+    </div>
+  
+          </div>
+
+          <section class="mt-16">
+            <div class="section-heading">
+              <div>
+                <p class="section-kicker">Related Entries</p>
+                <h2 class="text-3xl font-display font-semibold tracking-[-0.05em] text-mist-50 md:text-4xl">Continue Reading</h2>
+              </div>
+              <p class="max-w-xl text-sm leading-7 text-mist-200/65 md:text-base">
+                Further notes on systems, motion control, performance boundaries, and shipping premium static experiences.
+              </p>
+            </div>
+
+            <div data-related-posts class="mt-10 grid gap-6 lg:grid-cols-3"></div>
+          </section>
+
+          <article class="glass-panel mt-16 rounded-[2rem] p-8 md:p-10">
+            <p class="eyebrow text-topaz-300">Build with Intent</p>
+            <h2 class="mt-4 max-w-2xl text-3xl font-display font-semibold tracking-[-0.05em] text-mist-50 md:text-4xl">
+              Need this level of frontend thinking in a real product or launch site?
+            </h2>
+            <p class="mt-6 max-w-2xl text-sm leading-7 text-mist-200/70 md:text-base">
+              The same discipline used in these entries is available for premium product pages, portfolio systems, and motion-heavy frontend architecture.
+            </p>
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a href="../../#contact" class="void-button">
+                Start a conversation
+                <i data-lucide="send"></i>
+              </a>
+              <a href="../../#projects" class="void-button void-button-ghost">
+                View projects
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="relative z-10 border-t border-white/10 bg-black/20">
+      <div class="mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 py-10 md:px-8 lg:px-10">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <div class="logo-wordmark text-2xl font-semibold tracking-tight text-mist-50">Lunerya</div>
+            <p class="mt-2 text-sm text-mist-200/60">Journal notes on systems, motion, and premium frontend delivery.</p>
+          </div>
+
+          <div data-socials-footer data-social-style="footer" class="flex flex-wrap gap-3"></div>
+        </div>
+
+        <div class="flex flex-col gap-5 border-t border-white/10 pt-6 text-sm text-mist-200/55 md:flex-row md:items-center md:justify-between">
+          <p>© <span data-current-year></span> Lunerya. Journal edition.</p>
+          <a href="../../#contact" class="transition hover:text-topaz-300">serhat.yavuz@agu.edu.tr</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

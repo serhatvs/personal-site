@@ -3,12 +3,20 @@ export const siteContent = {
   nav: [
     { label: 'Origin', target: 'about' },
     { label: 'Creations', target: 'projects' },
+    { label: 'Journal', target: 'journal' },
     { label: 'Tools', target: 'stack' },
     { label: 'Metrics', target: 'stats' },
-    { label: 'Transmission', target: 'contact' },
+    { label: 'Communication', target: 'contact' },
   ],
   contact: {
     email: 'serhat.yavuz@agu.edu.tr',
+  },
+  journal: {
+    label: 'Journal',
+    kicker: 'Chapter 03',
+    title: 'Journal',
+    summary: 'Field notes on frontend systems, motion craft, and shipping premium static experiences.',
+    previewCount: 3,
   },
   projects: [
     {
