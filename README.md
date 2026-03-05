@@ -14,7 +14,7 @@ Premium static developer portfolio built with Vite, TailwindCSS, GSAP, Anime.js,
 ## Local development
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
@@ -37,14 +37,64 @@ npm run build
 npm run preview
 ```
 
+## Predeploy verification
+
+Run this exact gate before opening a PR or merging:
+
+```bash
+npm ci && npm run ci:verify
+```
+
+- `ci:verify` runs `vite build` and a dist smoke validator (`scripts/deploy-smoke.mjs`).
+- Smoke checks cover required route files, hashed JS/CSS assets, and internal link resolution across all built HTML files.
+
+## CI behavior (GitHub Actions)
+
+- Workflow: `.github/workflows/ci.yml`
+- Triggers:
+  - Pull requests targeting `main`
+  - Pushes to `main`
+- Job contract:
+  - Setup Node from `.nvmrc`
+  - `npm ci`
+  - `npm run ci:verify`
+- On failure, the built `dist/` directory is uploaded as an artifact for diagnostics.
+
+Recommended repository protection for `main`:
+
+1. Require pull requests before merging.
+2. Require CI status checks to pass (`CI / verify`).
+3. Disable direct pushes to `main`.
+
 ## Deployment
 
 ### Vercel
 
-- Framework preset: `Vite`
+Configuration is committed in `vercel.json`:
+
+- Framework preset: `vite`
+- Install command: `npm ci`
 - Build command: `npm run build`
 - Output directory: `dist`
-- Add `VITE_CONTACT_ENDPOINT` in project environment variables
+- Static cache rule for `/assets/*`: immutable long-term cache
+- Baseline security headers:
+  - `X-Content-Type-Options: nosniff`
+  - `Referrer-Policy: strict-origin-when-cross-origin`
+  - `X-Frame-Options: DENY`
+  - `Permissions-Policy` with sensitive features disabled by default
+
+Project setup checklist:
+
+1. Import/connect this GitHub repo in Vercel.
+2. Set **Production Branch** to `main`.
+3. Ensure Git Integration auto-deploy is enabled (default).
+4. Set project environment variables:
+   - `VITE_BASE_PATH=/`
+   - `VITE_CONTACT_ENDPOINT` (optional)
+
+Rollback:
+
+- In Vercel dashboard, open Deployments and redeploy/promote the last known good production deployment.
 
 ### Netlify
 

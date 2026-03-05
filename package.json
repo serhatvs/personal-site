@@ -9,7 +9,13 @@
     "content:generate": "npm run blog:generate && npm run portfolio:generate",
     "dev": "vite",
     "build": "vite build",
+    "smoke:dist": "node ./scripts/deploy-smoke.mjs",
+    "ci:verify": "npm run build && npm run smoke:dist",
     "preview": "vite preview --host"
+  },
+  "engines": {
+    "node": ">=22.12 <23",
+    "npm": ">=10"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.27",
