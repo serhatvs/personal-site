@@ -272,7 +272,7 @@ function renderPostPage(post, previousPost, nextPost, basePath) {
 
         <div class="flex items-center gap-3">
           <a href="${rootPrefix}#contact" class="void-button hidden md:inline-flex">
-            Connect
+            Contact
             <i data-lucide="arrow-right"></i>
           </a>
 
@@ -308,13 +308,13 @@ function renderPostPage(post, previousPost, nextPost, basePath) {
           ${renderMobileNav(rootPrefix)}
 
           <div class="glass-panel mt-12 rounded-[1.75rem] p-5">
-            <div class="eyebrow text-amethyst-200">Signal Route</div>
+            <div class="eyebrow text-amethyst-200">Contact</div>
             <a href="mailto:serhat.yavuz@agu.edu.tr" class="mt-4 inline-flex items-center gap-3 text-lg font-medium text-mist-50 transition hover:text-topaz-300">
               <i data-lucide="mail"></i>
               serhat.yavuz@agu.edu.tr
             </a>
             <p class="mt-4 text-sm text-mist-200/70">
-              Available for premium product design, frontend systems, and immersive interface builds.
+              Available for product websites, frontend systems, and motion-led interface builds.
             </p>
           </div>
         </div>
@@ -364,7 +364,7 @@ function renderPostPage(post, previousPost, nextPost, basePath) {
                 <h2 class="text-3xl font-display font-semibold tracking-[-0.05em] text-mist-50 md:text-4xl">Continue Reading</h2>
               </div>
               <p class="max-w-xl text-sm leading-7 text-mist-200/65 md:text-base">
-                Further notes on systems, motion control, performance boundaries, and shipping premium static experiences.
+                Further notes on systems, motion control, performance boundaries, and shipping polished static experiences.
               </p>
             </div>
 
@@ -377,7 +377,7 @@ function renderPostPage(post, previousPost, nextPost, basePath) {
               Need this level of frontend thinking in a real product or launch site?
             </h2>
             <p class="mt-6 max-w-2xl text-sm leading-7 text-mist-200/70 md:text-base">
-              The same discipline used in these entries is available for premium product pages, portfolio systems, and motion-heavy frontend architecture.
+              The same discipline used in these entries is available for product pages, portfolio systems, and motion-heavy frontend architecture.
             </p>
             <div class="mt-8 flex flex-col gap-4 sm:flex-row">
               <a href="${rootPrefix}#contact" class="void-button">
@@ -405,7 +405,7 @@ function renderPostPage(post, previousPost, nextPost, basePath) {
           <div data-socials-footer data-social-style="footer" class="flex flex-wrap gap-3"></div>
         </div>
 
-        <div class="flex flex-col gap-5 border-t border-white/10 pt-6 text-sm text-mist-200/55 md:flex-row md:items-center md:justify-between">
+        <div class="flex flex-col gap-5 border-t border-white/10 pt-6 text-sm text-mist-200/70 md:flex-row md:items-center md:justify-between">
           <p>&copy; <span data-current-year></span> Lunerya. Journal edition.</p>
           <a href="${rootPrefix}#contact" class="transition hover:text-topaz-300">serhat.yavuz@agu.edu.tr</a>
         </div>

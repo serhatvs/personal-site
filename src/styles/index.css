@@ -101,6 +101,14 @@
     -webkit-tap-highlight-color: transparent;
   }
 
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid rgba(255, 215, 122, 0.9);
+    outline-offset: 4px;
+  }
+
   i[data-lucide] {
     display: inline-flex;
     height: 1.05rem;
@@ -124,7 +132,7 @@
 
   .section-kicker,
   .eyebrow {
-    @apply text-[0.68rem] font-medium uppercase tracking-[0.32em];
+    @apply text-[0.68rem] font-medium uppercase tracking-[0.24em] md:tracking-[0.32em];
   }
 
   .section-title {
@@ -218,8 +226,6 @@
 
   .contact-note__copy {
     @apply mt-3 text-sm leading-6 text-mist-200/70;
-    text-align: justify;
-    text-align-last: left;
     text-wrap: pretty;
   }
 
@@ -478,6 +484,12 @@
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
 }
 
+.motion-reduced .scanline,
+.motion-reduced .hero-orbit,
+.motion-reduced .hero-beacon {
+  animation: none !important;
+}
+
 .cosmic-grid {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
@@ -502,6 +514,11 @@
 .hero-canvas {
   height: 100%;
   width: 100%;
+}
+
+[data-hero-title],
+[data-hero-subtitle] {
+  text-shadow: 0 2px 24px rgba(5, 2, 10, 0.55);
 }
 
 .hero-orbit {
@@ -643,6 +660,29 @@
 }
 
 @media (max-width: 767px) {
+  .hero-canvas {
+    opacity: 0.3 !important;
+  }
+
+  [data-hero-subtitle] {
+    color: rgba(229, 231, 234, 0.86);
+  }
+
+  .section-shell {
+    @apply py-16;
+  }
+
+  .section-title {
+    @apply text-3xl tracking-[-0.035em];
+  }
+
+  .chip,
+  .void-button,
+  .tech-control,
+  .nav-link {
+    letter-spacing: 0.16em;
+  }
+
   .project-card::before {
     inset: -20% 20% 55% -15%;
   }

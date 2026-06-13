@@ -12,7 +12,7 @@ export const projectRecords = [
     description:
       'Case study for Pulse Atlas, an AI launch system focused on motion staging, static architecture, and premium product storytelling.',
     year: '2026',
-    status: 'Concept Launch',
+    status: 'Case Study',
     accent: 'amethyst',
     tags: ['AI Presentation', 'Motion Design', 'Static Architecture'],
     stack: ['Vite', 'GSAP', 'Three.js'],

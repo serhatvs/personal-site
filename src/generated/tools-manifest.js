@@ -29,7 +29,7 @@ export const toolsManifest = [
     "name": "TailwindCSS",
     "group": "Foundation",
     "icon": "boxes",
-    "summary": "A utility-first system for the Void Edition palette, glass layers, spacing rhythm, and responsive composition.",
+    "summary": "A utility-first system for the Lunerya palette, glass layers, spacing rhythm, and responsive composition.",
     "excerpt": "TailwindCSS provides the speed of utilities while still allowing the interface to carry a distinct visual language through curated component classes and tokens.",
     "description": "Tool profile for TailwindCSS in the Lunerya stack, covering design tokens, glass surfaces, and responsive composition.",
     "accent": "amethyst",

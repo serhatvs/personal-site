@@ -63,7 +63,7 @@ export function bootstrap() {
       await startMotionEnhancements()
     }
 
-    if (!reducedMotion && dom.canvas && canUseWebGL()) {
+    if (!reducedMotion && dom.canvas && canUseWebGL() && window.matchMedia('(min-width: 768px)').matches) {
       await startThreeEnhancement(dom.canvas)
     }
   }

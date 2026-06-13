@@ -204,7 +204,7 @@ function renderHeader(rootPrefix, badge) {
         ${renderDesktopNav(rootPrefix)}
         <div class="flex items-center gap-3">
           <a href="${rootPrefix}#contact" class="void-button hidden md:inline-flex">
-            Connect
+            Contact
             <i data-lucide="arrow-right"></i>
           </a>
           <button
@@ -243,13 +243,13 @@ function renderMobileMenu(rootPrefix) {
           ${renderMobileNav(rootPrefix)}
 
           <div class="glass-panel mt-12 rounded-[1.75rem] p-5">
-            <div class="eyebrow text-amethyst-200">Signal Route</div>
+            <div class="eyebrow text-amethyst-200">Contact</div>
             <a href="mailto:serhat.yavuz@agu.edu.tr" class="mt-4 inline-flex items-center gap-3 text-lg font-medium text-mist-50 transition hover:text-topaz-300">
               <i data-lucide="mail"></i>
               serhat.yavuz@agu.edu.tr
             </a>
             <p class="mt-4 text-sm text-mist-200/70">
-              Available for premium product design, frontend systems, and immersive interface builds.
+              Available for product websites, frontend systems, and motion-led interface builds.
             </p>
           </div>
         </div>
@@ -269,8 +269,8 @@ function renderFooter(rootPrefix, copy) {
           </div>
           <div data-socials-footer data-social-style="footer" class="flex flex-wrap gap-3"></div>
         </div>
-        <div class="flex flex-col gap-5 border-t border-white/10 pt-6 text-sm text-mist-200/55 md:flex-row md:items-center md:justify-between">
-          <p>&copy; <span data-current-year></span> Lunerya. Void Edition.</p>
+        <div class="flex flex-col gap-5 border-t border-white/10 pt-6 text-sm text-mist-200/70 md:flex-row md:items-center md:justify-between">
+          <p>&copy; <span data-current-year></span> Lunerya. Built with care for the web.</p>
           <a href="${rootPrefix}#contact" class="transition hover:text-topaz-300">serhat.yavuz@agu.edu.tr</a>
         </div>
       </div>
@@ -399,7 +399,7 @@ function renderProjectDetailPage(project, href, imageHref) {
     scriptSrc: '../../src/project-detail.js',
     badge: 'PROJECTS',
     bodyContent,
-    footerCopy: 'Project cases on systems, interaction design, and premium frontend execution.',
+    footerCopy: 'Project cases on systems, interaction design, and production frontend execution.',
     pageKind: 'projects',
   })
 }

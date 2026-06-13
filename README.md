@@ -1,6 +1,6 @@
-# Lunerya Void Edition
+# Lunerya Product Engineering Studio
 
-Premium static developer portfolio built with Vite, TailwindCSS, GSAP, Anime.js, Three.js, and Lucide.
+Static studio website built with Vite, TailwindCSS, GSAP, Anime.js, Three.js, and Lucide. The site focuses on polished product storytelling, frontend systems, motion enhancement, and static deployment.
 
 ## Stack
 
@@ -28,7 +28,7 @@ VITE_BASE_PATH=/
 ```
 
 - `VITE_CONTACT_ENDPOINT`: Optional external form endpoint for production contact submissions.
-- `VITE_BASE_PATH`: Use `/` for Vercel and Netlify. Use `/lunerya-void/` for GitHub Pages.
+- `VITE_BASE_PATH`: Use `/` for Vercel and Netlify. Use the repository subpath when deploying to GitHub Pages.
 
 ## Production build
 
@@ -54,6 +54,6 @@ npm run preview
 
 ### GitHub Pages
 
-- Set `VITE_BASE_PATH=/lunerya-void/`
+- Set `VITE_BASE_PATH` to the repository subpath, for example `/personal-site/`
 - Build and publish the generated `dist/` directory
 - Keep the contact form on an external endpoint

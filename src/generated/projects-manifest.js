@@ -9,7 +9,7 @@ export const projectsManifest = [
     "excerpt": "Pulse Atlas turns a dense AI platform pitch into a paced launch experience with clear architecture, premium motion, and static delivery discipline.",
     "description": "Case study for Pulse Atlas, an AI launch system focused on motion staging, static architecture, and premium product storytelling.",
     "year": "2026",
-    "status": "Concept Launch",
+    "status": "Case Study",
     "accent": "amethyst",
     "tags": [
       "AI Presentation",

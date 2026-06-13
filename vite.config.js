@@ -87,10 +87,20 @@ export default defineConfig(async ({ mode }) => {
           ...toolInputs,
         },
         output: {
-          manualChunks: {
-            three: ['three'],
-            motion: ['gsap', 'animejs'],
-            icons: ['lucide'],
+          manualChunks(id) {
+            if (id.includes('node_modules/three')) {
+              return 'three'
+            }
+
+            if (id.includes('node_modules/gsap') || id.includes('node_modules/animejs')) {
+              return 'motion'
+            }
+
+            if (id.includes('node_modules/lucide')) {
+              return 'icons'
+            }
+
+            return null
           },
         },
       },

@@ -25,7 +25,7 @@ function setStatus(element, message, tone = 'info') {
 }
 
 function buildMailto(email, values) {
-  const subject = encodeURIComponent(`Portfolio inquiry from ${values.name || 'Unknown sender'}`)
+  const subject = encodeURIComponent(`Project inquiry from ${values.name || 'Unknown sender'}`)
   const body = encodeURIComponent(`${values.message}\n\nFrom: ${values.name || 'Unknown'}\nEmail: ${values.email}`)
   return `mailto:${email}?subject=${subject}&body=${body}`
 }
@@ -86,15 +86,15 @@ export function initContactForm({ form, statusElement, submitButton, endpoint, f
     }
 
     if (!canSubmitAgain()) {
-      const rateLimitedMessage = 'Please wait a minute before sending another transmission.'
+      const rateLimitedMessage = 'Please wait a minute before sending another message.'
       setStatus(statusElement, rateLimitedMessage, 'error')
       toast.show(rateLimitedMessage)
       return
     }
 
     submitButton.disabled = true
-    submitButton.innerHTML = 'Transmitting...'
-    setStatus(statusElement, 'Routing signal...', 'info')
+    submitButton.innerHTML = 'Sending...'
+    setStatus(statusElement, 'Preparing your message...', 'info')
 
     try {
       if (!endpoint) {
@@ -102,7 +102,7 @@ export function initContactForm({ form, statusElement, submitButton, endpoint, f
         markSubmitted()
         form.reset()
         setStatus(statusElement, 'Email client opened. If nothing happened, use the direct email link.', 'success')
-        toast.show('Transmission redirected to your email client.')
+        toast.show('Message opened in your email client.')
         return
       }
 
@@ -125,10 +125,10 @@ export function initContactForm({ form, statusElement, submitButton, endpoint, f
 
       markSubmitted()
       form.reset()
-      setStatus(statusElement, 'Transmission sent. Expect a reply within 2 to 4 business days.', 'success')
-      toast.show('Transmission sent successfully.')
+      setStatus(statusElement, 'Message sent. Expect a reply within 2 to 4 business days.', 'success')
+      toast.show('Message sent successfully.')
     } catch {
-      const fallbackMessage = 'Transmission failed. Use the direct email link instead.'
+      const fallbackMessage = 'Message could not be sent. Use the direct email link instead.'
       setStatus(statusElement, fallbackMessage, 'error')
       toast.show(fallbackMessage)
     } finally {
